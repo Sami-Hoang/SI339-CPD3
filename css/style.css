@@ -1,0 +1,392 @@
+/* OVERALL STYLE */
+html, body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #081c15;
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    text-align:center;
+    margin: 20px;
+}
+
+
+/* HORIZONTAL NAVIGATION BAR */
+nav {
+    width: 100vw;
+    background-color: #d8f3dc;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    padding:0
+}
+nav li{
+    padding: 1em 2em;
+    margin: auto;
+}
+
+
+/* DIFFERENT LINK STATES*/
+a{
+    color: #081c15;
+    text-transform: uppercase;
+    font-weight:bold;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+}
+/* unvisited */
+a:link{
+    color: #081c15
+}
+/* hover */
+a:hover{
+    font-size: 110%;
+    color: #2D6A4F;
+    text-decoration: underline;
+}
+/* active */
+a:active{
+    font-size: 110%;
+    color: blue;
+    text-decoration: underline;
+}
+
+
+/* HIDE SKIP TO MAIN CONTENT 
+until tabbed to focus, added a skip class to html */
+a.skip {
+    position: absolute;
+    top: -100px;
+    background-color: #081c15;
+    color: #d8f3dc;
+    transition: top .5s;
+}
+
+.skip:focus{
+    top:0px;
+}
+
+
+/* HEADER SECTION - for more emphasis */
+header{
+    background-color: #1b4332;
+    padding: 20px;
+}
+
+
+/* MAIN IMAGE ON PAGE */
+.top-image{
+    display: block;
+    margin: auto;
+    padding:10px;
+    border-radius: 20%; 
+
+    /* animation zoom in on hover image */
+    transition: transform .2s;
+}
+
+/* zoom in on image when hover */
+.top-image:hover{
+    transform: scale(1.5);
+}
+
+
+/* 1ST HEADING (athlete name, page title) */
+h1{
+    text-align: center;
+    color: #d8f3dc;
+}
+
+
+/* TABLE STYLES */
+/* table titles */
+h2{
+    text-align: center;
+    margin: 20px
+}
+
+/* table styles */
+table{
+    width: 90%;
+    margin: auto;
+}
+
+/* fixed table header when scrolling */
+th{
+    background-color: #1B4332;
+    color: #D8F3DC;
+    position:sticky;
+    top:0;
+    z-index: 10;
+}
+
+/* alternate rows by color  */
+tr:nth-child(even){
+    background-color: #B7E4C7;
+}
+
+/* highlight table row on hover */
+tr:hover{
+    background-color: #52B788;
+}
+
+td{
+    text-align: center;
+}
+
+/* make the entire table cell clickable & not just the text */
+tbody a { 
+    display: block; 
+}
+
+
+/* FOOTER STYLE */
+footer{
+    background-color: #081C15;
+    color: #D8F3DC;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a{
+    font-size: large;
+    font-weight: bold;
+    color: #D8F3DC;
+    transition: all 0.5s ease-out;
+    text-decoration: underline;
+}
+
+/* different link states in footer */
+/* unvisited */
+footer a:link{
+    color: #D8F3DC
+}
+
+footer a:visited{
+    color: #52B788
+}
+
+/* hover */
+footer a:hover{
+    font-size: 110%;
+    color: #74C69D;
+    text-decoration: underline;
+}
+/* active */
+footer a:active{
+    font-size: 110%;
+    color: blue;
+    text-decoration: underline;
+}
+
+
+/* HOMEPAGE'S CARD STYLE - link to women's & men's team */
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    height: 50vw;
+    margin: 40px auto;
+    background-color: #B7E4C7;
+    transition: transform .2s;
+    box-shadow: 8px 9px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover{
+    transform: scale(0.9);
+    background-color: #2D6A4F;
+    color: #D8F3DC;
+    text-decoration: underline;
+}
+
+a.card-text {
+    color: #081C15;
+    font-weight: bold;
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.card img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    margin: auto;
+}
+
+
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+/* OVERALL STYLE */
+html, body {
+    color: #D8F3DC;
+    background-color: #081C15;
+}
+
+
+/* HORIZONTAL NAVIGATION BAR */
+nav {
+    background-color: #081C15;
+}
+
+nav a:hover{
+    color:#D8F3DC;
+}
+
+/* DIFFERENT LINK STATES*/
+a{
+    color: #D8F3DC;
+}
+/* unvisited */
+a:link{
+    color: #D8F3DC
+}
+/* hover */
+a:hover{
+    color: #081C15;
+}
+/* active */
+a:active{
+    color: blue;
+}
+
+
+/* HIDE SKIP TO MAIN CONTENT 
+until tabbed to focus, added a skip class to html */
+a.skip {
+    background-color: #d8f3dc;
+    color:#081c15;
+}
+
+
+/* TABLE STYLES */
+/* alternate rows by color, also change text color for dark mode */
+tr:nth-child(even){
+    background-color: #B7E4C7;
+    color: #081C15;
+}
+
+tr:nth-child(even) a{
+    color: #081C15;  
+}
+
+/* highlight table row on hover */
+tr:hover{
+    background-color: #52B788;
+}
+
+/* FOOTER STYLE */
+footer{
+    border-top: solid 1px #d8f3dc;
+}
+
+/* different link states in footer */
+/* unvisited */
+footer a:link{
+    color: #D8F3DC
+}
+
+
+/* HOMEPAGE'S CARD STYLE - link to women's & men's team */
+.card {
+    box-shadow: 8px 9px 2px #68796bc7;
+    color: #081c15;
+}
+}
+
+
+
+/* ANIMATIONS */
+h1{
+    animation-duration: 2s;
+    animation-name: slide-in;
+}
+
+@keyframes slide-in {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
+
+
+  /* REDUCED MOTION 
+  reduce transitions and animations */
+@media(prefers-reduced-motion: reduce) {
+    h1{
+        animation: none;
+}
+
+/* DIFFERENT LINK STATES*/
+a{
+    transition:none;
+}
+
+/* hover */
+a:hover{
+    font-size: 100%;
+}
+/* active */
+a:active{
+    font-size: 100%;
+}
+
+
+a.skip {
+    
+    transition: none;
+}
+
+.top-image{
+    transition: none;
+}
+
+/* zoom in on image when hover */
+.top-image:hover{
+    transform: none;
+}
+
+footer a{
+    transition: none;
+    font-size: 100%;
+}
+
+footer a:hover{
+    font-size: 100%;
+
+}
+
+footer a:active{
+    font-size: 100%;
+}
+
+/* HOMEPAGE'S CARD STYLE - link to women's & men's team */
+.card {
+    transition: none;
+}
+
+.card:hover{
+    transform: none;
+    background-color: #2D6A4F;
+    color: #D8F3DC;
+    text-decoration: underline;
+
+}
+
+a.card-text {
+    font-size:x-large;
+}
+
+}
